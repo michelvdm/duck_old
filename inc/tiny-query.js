@@ -156,15 +156,5 @@ $(function(){
 });
 
 $(function(){
-
-	var $menu=$('aside'),isOpen;
-
-	function toggleMenu(){
-		$menu.animate({left:isOpen?-270:10},400);
-		isOpen=!isOpen;
-		return false;
-	}
-
-	$('.bb-menu-link').click(toggleMenu);
-
+	$('.bb-menu-link').click(function(){return !$('aside').toggleClass('open')});
 });
