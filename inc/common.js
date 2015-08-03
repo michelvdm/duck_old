@@ -1,3 +1,5 @@
+'use strict';
+
 /* slideshow plugin */
 $.fn.acSlider=function(){
 	if(!this.length)return;
