@@ -41,7 +41,8 @@ var A=[],
 			});
 			o.T=setInterval(o.S,10);
 		}
-	}
+	},
+	S=400
 ;
 
 function addEvent(a,b,c){a.addEventListener(b,c,F)}
@@ -89,9 +90,9 @@ J.fn=O.prototype={
 		}
 		return m
 	},
-	slideUp:function(a){var m=this,i=m[cL];a=a||400;while(i--)AN.s(m[i],{height:0},a);m.timer=setTimeout(function(){m.css({display:cN})},a);return m},
-	fadeIn:function(a,f){return this.css({opacity:0,display:cB}).animate({opacity:1},a||400,f)},
-	fadeOut:function(a,f){return this.animate({opacity:0},a||400,f)},
+	slideUp:function(a){var m=this,i=m[cL];a=a||S;while(i--)AN.s(m[i],{height:0},a);m.timer=setTimeout(function(){m.css({display:cN})},a);return m},
+	fadeIn:function(a,f){return this.css({opacity:0,display:cB}).animate({opacity:1},a||S,f)},
+	fadeOut:function(a,f){return this.animate({opacity:0},a||S,f)},
 	show:function(){return this.css({display:cB,opacity:'1'})},
 	hide:function(){return this.css({display:cN})},
 	parent:function(){return new O(this[0].parentNode)},
@@ -101,7 +102,3 @@ J.fn=O.prototype={
 	append:function(a){var m=this,i=m[cL];while(i--)m[i][cH]+=a;return m}
 }
 addEvent(D,'DOMContentLoaded',function(){for(var p in A)A[p]()})}();
-
-/*! svg4everybody v1.0.0 | github.com/jonathantneal/svg4everybody */
-!function(e,t,n,o,i){function r(t,n){if(n){var o=n.getAttribute("viewBox"),i=e.createDocumentFragment(),r=n.cloneNode(!0);for(o&&t.setAttribute("viewBox",o);r.childNodes.length;)i.appendChild(r.childNodes[0]);t.appendChild(i)}}function a(){var t=this,n=e.createElement("x"),o=t.s;n.innerHTML=t.responseText,t.onload=function(){o.splice(0).map(function(e){r(e[0],n.querySelector("#"+e[1].replace(/(\W)/g,"\\$1")))})},t.onload()}function d(){for(var i;i=t[0];){var s=i.parentNode,l=i.getAttribute("xlink:href").split("#"),u=l[0],c=l[1];if(s.removeChild(i),u.length){var g=o[u]=o[u]||new XMLHttpRequest;g.s||(g.s=[],g.open("GET",u),g.onload=a,g.send()),g.s.push([s,c]),4===g.readyState&&g.onload()}else r(s,e.getElementById(c))}n(d)}i&&d()}(document,document.getElementsByTagName("use"),window.requestAnimationFrame||window.setTimeout,{},/Trident\/[567]\b/.test(navigator.userAgent)||/Edge\/12/.test(navigator.userAgent)||(navigator.userAgent.match(/AppleWebKit\/(\d+)/)||[])[1]<537);
-

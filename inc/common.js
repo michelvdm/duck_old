@@ -1,53 +1,7 @@
 'use strict';
 
-/* slideshow plugin */
-$.fn.acSlider=function(){
-	if(!this.length)return;
-
-	var options={ delay:2500, speed:1000 },$list=this,$container=$list.parent(),$items=$list.find('li'),num=$items.length,timer,active=0,$dots;
-
-	function prepSlider(){
-		var b=[];
-		$items.each(function(i,o){ $(o).css({'zIndex':5-i}); b.push('<b></b>') });
-		$dots=$container.find('.ac-sl-bullets').html(b.join('')).find('b');
-		$dots.eq(active).addClass('on');
-	}
-
-	function nextSlide(){
-		if(active<num-1){
-			$items.eq(active).fadeOut(options.speed);
-			active++;
-		}
-		else{
-			$items.eq(0).fadeIn(options.speed, function(){$items.css({opacity:1,display:'block'})});
-			active=0;
-		}
-		$dots.removeClass('on').eq(active).addClass('on');
-		doSlider();
-	}
-
-	function doSlider(){ timer=setTimeout(nextSlide,options.delay) }
-
-	function stopSlider(){ clearTimeout(timer); timer=null }
-
-	function doNav(){
-		var $o=$(this),p=$o.index();
-		if(p==active)return;
-		stopSlider();
-		$items.each(function(i,o){ if(i>=p)$(o).show(); else $(o).hide() });
-		active=p;
-		$dots.removeClass('on').eq(active).addClass('on');
-		return false;
-	}
-
-	prepSlider();
-	$container.hover( stopSlider, doSlider );
-	$dots.click(doNav);
-	doSlider();
-};
-$(function(){
-	$( ".ac-slideshow" ).acSlider(); 
-});
+/*! svg4everybody v1.0.0 | github.com/jonathantneal/svg4everybody */
+!function(e,t,n,o,i){function r(t,n){if(n){var o=n.getAttribute("viewBox"),i=e.createDocumentFragment(),r=n.cloneNode(!0);for(o&&t.setAttribute("viewBox",o);r.childNodes.length;)i.appendChild(r.childNodes[0]);t.appendChild(i)}}function a(){var t=this,n=e.createElement("x"),o=t.s;n.innerHTML=t.responseText,t.onload=function(){o.splice(0).map(function(e){r(e[0],n.querySelector("#"+e[1].replace(/(\W)/g,"\\$1")))})},t.onload()}function d(){for(var i;i=t[0];){var s=i.parentNode,l=i.getAttribute("xlink:href").split("#"),u=l[0],c=l[1];if(s.removeChild(i),u.length){var g=o[u]=o[u]||new XMLHttpRequest;g.s||(g.s=[],g.open("GET",u),g.onload=a,g.send()),g.s.push([s,c]),4===g.readyState&&g.onload()}else r(s,e.getElementById(c))}n(d)}i&&d()}(document,document.getElementsByTagName("use"),window.requestAnimationFrame||window.setTimeout,{},/Trident\/[567]\b/.test(navigator.userAgent)||/Edge\/12/.test(navigator.userAgent)||(navigator.userAgent.match(/AppleWebKit\/(\d+)/)||[])[1]<537);
 
 /* responsive menu */
 $(function(){
