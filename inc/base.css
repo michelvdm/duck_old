@@ -193,9 +193,9 @@ aside ul a{display:block;padding:16px;border-bottom:solid 1px #ccc;text-decorati
 	width:20px;
 	height:20px;
 	padding:20px;
-	outline:solid 1px white;
 	fill:#fff;
 	z-index:5;
+	background:#000;
 }
 .mv-lb-prev{bottom:0;left:0;}
 .mv-lb-next{bottom:0;right:0;}

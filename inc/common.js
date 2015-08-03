@@ -1,4 +1,4 @@
-
+/* slideshow plugin */
 $.fn.acSlider=function(){
 	if(!this.length)return;
 
@@ -43,12 +43,11 @@ $.fn.acSlider=function(){
 	$dots.click(doNav);
 	doSlider();
 };
-
-
 $(function(){
 	$( ".ac-slideshow" ).acSlider(); 
 });
 
+/* responsive menu */
 $(function(){
 	$('.bb-menu-link').click(function(){return !$('aside').toggleClass('open')});
 });
@@ -64,7 +63,14 @@ $(function(){
 		active=i;
 		setTimeout(function(){$box.find('img').attr('src',p.link).css({display:'none'}).fadeIn(speed);$box.find('div').html(p.txt)},ww);
 	}
-	function showBox(){var p=this.index*1;$('.mv-litebox').fadeIn(speed);setTimeout(function(){setImg(p)},speed);return false}
+	function showBox(){
+		var p=this.index*1;
+		$box.find('img').hide();
+		$box.find('div').html('');
+		$('.mv-litebox').fadeIn(speed);
+		setTimeout(function(){setImg(p)},speed);
+		return false
+	}
 	function doAction(){
 		switch(this.className.slice(6)){
 			case'close':$box.fadeOut(speed);setTimeout(function(){$box.css({display:'none'})},speed);break;
