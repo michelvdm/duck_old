@@ -61,7 +61,7 @@ $(function(){
 		var p=list[i],ww=0;
 		if(active>-1)$box.find('img').fadeOut(speed),$box.find('div').html(''),ww=speed;
 		active=i;
-		setTimeout(function(){$box.find('img').attr('src',p.link).css({display:'none'}).fadeIn(speed);$box.find('div').html(p.txt)},ww);
+		setTimeout(function(){$box.find('img').attr('src',p.link).hide().fadeIn(speed);$box.find('div').html(p.txt)},ww);
 	}
 	function showBox(){
 		var p=this.index*1;
@@ -73,9 +73,9 @@ $(function(){
 	}
 	function doAction(){
 		switch(this.className.slice(6)){
-			case'close':$box.fadeOut(speed);setTimeout(function(){$box.css({display:'none'})},speed);break;
 			case'prev':setImg(active-1);break;
-			default:setImg(active+1);
+			case'next':setImg(active+1);break;
+			default:active=-1;$box.fadeOut(speed);setTimeout(function(){$box.hide()},speed);
 		}
 		return false;
 	}
