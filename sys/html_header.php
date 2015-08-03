@@ -5,7 +5,7 @@
 <link rel="icon" href="<?php echo ROOT; ?>/inc/favicon.ico">
 
 <header><div class="wrap">
-<a href="" class="bb-menu-link"><svg><use xlink:href="inc/icons.svg#menu-icon"></use></a>
+<a href="" class="bb-menu-link"><svg><use xlink:href="inc/icons.svg#menu-icon"></use></svg></a>
 <a href="" class="home"><?php echo APPNAME; ?></a>
 <a href="javascript:location.reload();" class="bb-reload" title="reload"><svg><use xlink:href="inc/icons.svg#reload-icon"></use></svg></a>
 </div></header>

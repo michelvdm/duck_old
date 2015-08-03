@@ -101,4 +101,18 @@ J.fn=O.prototype={
 	index:function(){var o=this[0],p=o.parentNode.childNodes,i=0;for(;i<p[cL];i++)if(p[i]==o)return i;return -1},
 	append:function(a){var m=this,i=m[cL];while(i--)m[i][cH]+=a;return m}
 }
+extend(J,{
+	ieVer:function(){
+		var o=navigator.userAgent,rv;
+		if(!/Trident\/[567]\b/.test(o))return -1;
+		var re=new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+    	return(!!re.exec(o))?parseFloat(RegExp.$1):11;
+	},
+	get:function(url,data,f){
+		var r=new XMLHttpRequest();
+  		r.onreadystatechange=function(){if(r.readyState==4 && r.status==200)f(r.responseText)}
+		r.open('GET',url,T);
+		r.send(data||F);
+	}
+});
 addEvent(D,'DOMContentLoaded',function(){for(var p in A)A[p]()})}();

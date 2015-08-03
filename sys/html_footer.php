@@ -9,9 +9,9 @@
 <img alt="" src="">
 <div></div>
 <span>
-	<a href="" class="mv-lb-prev"><svg><use xlink:href="inc/icons.svg#leftarrow-icon"></use></a>
-	<a href="" class="mv-lb-next"><svg><use xlink:href="inc/icons.svg#rightarrow-icon"></use></a>
-	<a href="" class="mv-lb-close"><svg><use xlink:href="inc/icons.svg#close-icon"></use></a>
+	<a href="" class="mv-lb-prev"><svg><use xlink:href="inc/icons.svg#leftarrow-icon"></use></svg></a>
+	<a href="" class="mv-lb-next"><svg><use xlink:href="inc/icons.svg#rightarrow-icon"></use></svg></a>
+	<a href="" class="mv-lb-close"><svg><use xlink:href="inc/icons.svg#close-icon">></use></svg></a>
 </span>
 </div>
 
