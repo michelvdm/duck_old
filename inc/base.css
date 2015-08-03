@@ -144,6 +144,64 @@ aside ul{border:0;margin:0}
 aside ul ul{display:none}
 aside ul a{display:block;padding:16px;border-bottom:solid 1px #ccc;text-decoration:none;color:inherit}
 
+/* gallery */
+.gallery{padding:20px 0}
+.gallery figure{
+    display:inline-block;
+    width:150px;
+    padding:10px;
+    margin:5px;
+    background:#fff;
+    box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);
+    transition:all .2s ease;
+}
+.gallery figure:hover{transform:scale(1.2) rotate(2deg)}
+.gallery .wp-caption-dd,.gallery figcaption{display:none}
+
+/* litebox */
+.mv-litebox{
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    background:rgba(0,0,0,.8);
+    z-index:999;
+    display:none;
+}
+
+.mv-litebox img{
+	max-width:100%;
+	max-height:100%;
+	position: relative;
+  	top:50%;
+  	left:50%;
+	transform:translate(-50%,-50%);
+}
+.mv-litebox div{
+	position:absolute;
+	left:0;
+	bottom:0;
+	right:0;
+	background:rgba(0,0,0,.6);
+	color:#fff;
+	padding:16px 10px;
+	text-align:center;
+}
+.mv-litebox span a{
+	position:absolute;
+	width:20px;
+	height:20px;
+	padding:20px;
+	outline:solid 1px white;
+	fill:#fff;
+	z-index:5;
+}
+.mv-lb-prev{bottom:0;left:0;}
+.mv-lb-next{bottom:0;right:0;}
+.mv-lb-close{right:0;top:0;}
+
+
 /* responsive */
 @media screen and (max-width:1000px){
 	.bb-menu-link{display:block}

@@ -16,9 +16,8 @@ class App{
 		tag('h1', APPNAME.' Test Page' );
 
 		//require( __DIR__.'/../test_slideshow.php');
-
-
-		require( __DIR__.'/../test_menu.php');
+//		require( __DIR__.'/../test_menu.php');
+		require( __DIR__.'/../sample_gallery.php');
 
 		//tag('p', 'Posted '.pastTime( time()-20000*5  ).'.' );
 		require( __DIR__.'/html_footer.php' );
