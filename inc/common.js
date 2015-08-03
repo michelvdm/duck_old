@@ -1,7 +1,16 @@
 'use strict';
 
-/*! svg4everybody v1.0.0 | github.com/jonathantneal/svg4everybody */
-!function(e,t,n,o,i){function r(t,n){if(n){var o=n.getAttribute("viewBox"),i=e.createDocumentFragment(),r=n.cloneNode(!0);for(o&&t.setAttribute("viewBox",o);r.childNodes.length;)i.appendChild(r.childNodes[0]);t.appendChild(i)}}function a(){var t=this,n=e.createElement("x"),o=t.s;n.innerHTML=t.responseText,t.onload=function(){o.splice(0).map(function(e){r(e[0],n.querySelector("#"+e[1].replace(/(\W)/g,"\\$1")))})},t.onload()}function d(){for(var i;i=t[0];){var s=i.parentNode,l=i.getAttribute("xlink:href").split("#"),u=l[0],c=l[1];if(s.removeChild(i),u.length){var g=o[u]=o[u]||new XMLHttpRequest;g.s||(g.s=[],g.open("GET",u),g.onload=a,g.send()),g.s.push([s,c]),4===g.readyState&&g.onload()}else r(s,e.getElementById(c))}n(d)}i&&d()}(document,document.getElementsByTagName("use"),window.requestAnimationFrame||window.setTimeout,{},/Trident\/[567]\b/.test(navigator.userAgent)||/Edge\/12/.test(navigator.userAgent)||(navigator.userAgent.match(/AppleWebKit\/(\d+)/)||[])[1]<537);
+/* make external svg work in IE */
+$(function(){
+	if($.ieVer()<9)return;
+	var $uses=$('use'),embeds={};
+
+	$uses.each(function(i,o){
+		var $o=$(o),url=$o.attr('xlink:href').split('#'),p=url[0];
+		$o.attr('xlink:href','#'+url[1]);
+		if(!embeds[p])embeds[p]=1,$.get(url[0],null,function(o){$('head').append(o)});
+	});
+});
 
 /* responsive menu */
 $(function(){
