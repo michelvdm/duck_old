@@ -95,6 +95,7 @@ J.fn=O.prototype={
 	fadeOut:function(a,f){return this.animate({opacity:0},a||S,f)},
 	show:function(){return this.css({display:cB,opacity:'1'})},
 	hide:function(){return this.css({display:cN})},
+	toggle:function(a){return this.css({display:a?cB:cN})},
 	parent:function(){return new O(this[0].parentNode)},
 	find:function(a){return new O(a,this[0])},
 	each:function(f){var m=this,i=m[cL];while(i--)f(i,m[i]);return m},

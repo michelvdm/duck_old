@@ -160,23 +160,23 @@ aside ul a{display:block;padding:16px;border-bottom:solid 1px #ccc;text-decorati
 
 /* litebox */
 .mv-litebox{
-    position:fixed;
-    top:0;
-    right:0;
-    bottom:0;
-    left:0;
-    background:rgba(0,0,0,.8);
-    z-index:999;
-    display:none;
+	position:fixed;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	background:rgba(0,0,0,.8);
+	z-index:999;
+	display:none;
 }
 
 .mv-litebox img{
 	max-width:100%;
 	max-height:100%;
-	position: relative;
+	position:absolute;
   	top:50%;
   	left:50%;
-	transform:translate(-50%,-50%);
+  	transform:translate(-50%,-50%);
 }
 .mv-litebox div{
 	position:absolute;
@@ -187,6 +187,7 @@ aside ul a{display:block;padding:16px;border-bottom:solid 1px #ccc;text-decorati
 	color:#fff;
 	padding:16px 10px;
 	text-align:center;
+	min-height:28px;
 }
 .mv-litebox span a{
 	position:absolute;

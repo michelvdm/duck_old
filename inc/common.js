@@ -30,7 +30,8 @@ $(function(){
 	}
 
 	function setImg(i){
-		i=(i<list.length)?(i<0)?0:i:0;
+		$('.mv-lb-prev').toggle(i>0);
+		$('.mv-lb-next').toggle(i<list.length-1);
 		var p=list[i],ww=0,s=(active>-1)?speed:0;
 		active=i;
 		if(s)$img.fadeOut(s),$txt.html('');

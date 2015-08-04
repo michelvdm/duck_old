@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en"><meta charset="utf-8">
 <title><?php echo APPNAME; ?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="<?php echo ROOT; ?>/inc/base.css">
+<link rel="stylesheet" href="<?php echo ROOT; ?>/inc/base.css?ver=2">
 <link rel="icon" href="<?php echo ROOT; ?>/inc/favicon.ico">
 
 <header><div class="wrap">
