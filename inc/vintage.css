@@ -5,7 +5,7 @@ linear-gradient(90deg, rgba(255,255,255,.07) 50%,transparent 50%),
 linear-gradient(90deg,transparent 50%,rgba(255,255,255,.08) 50%),
 linear-gradient(90deg,transparent 50%,rgba(255,255,255,.1) 50%);
 background-size: 13px, 29px, 37px, 53px}
-.wrap{max-width:1000px;margin:auto;padding:0 10px}
+.wrap{max-width:1000px;margin:auto;padding:0 20px}
 
 header{background:#E45640;color:#ffc;text-align:center;padding:5px;box-shadow:0 5px 5px rgba(0,0,0,.8);position:relative}
 header .wrap{;position:relative}
