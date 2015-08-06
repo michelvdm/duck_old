@@ -1,0 +1,53 @@
+html,body,h1,p{margin:0;padding:0}
+body{font-family:trebuchet ms,sans-serif;font-size:20px;line-height:1.4}
+.wrap{max-width:1000px;margin:auto;padding:0 20px}
+
+header{text-align:center;padding:5px}
+header .wrap{position:relative}
+.ss-title{margin-left:240px}
+
+main{padding:62px 0}
+
+aside{float:left;width:200px}
+aside ul{margin:0;padding:0;list-style:none}
+aside a{color:inherit;display:block;height:60px;line-height:60px;text-align:center;border-radius:5%;text-decoration:none;box-shadow:0 5px 5px rgba(0,0,0,.8);margin-bottom:20px;position:relative;font-weight:bold;letter-spacing:2px;transition:all .4s ease}
+aside .on a,aside a:hover{transform:scale(1.1) rotate(-2deg)}
+
+article{margin-left:240px}
+h1{font-size:2.4em;line-height:1.2;margin-bottom:50px}
+h1{}
+p{margin-bottom:1em}
+
+/* dark theme 
+red: #b32f24
+lt grey: #b7b7b7
+green: #607625
+dark grey: #707070
+black: #1a1a1a
+*/
+body{background:#1a1a1a;color:#fff}
+header{background:#707070}
+aside img{display:block;margin-bottom:40px}
+aside a{background:#707070}
+aside .on a{background:#b32f24}
+aside a:hover{background:#607625}
+h1{color:#b32f24}
+
+/* font */
+@font-face {
+    font-family: 'truecrimes';
+    src: url('fonts/true-crimes-webfont.eot');
+    src: url('fonts/true-crimes-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/true-crimes-webfont.woff') format('woff'),
+         url('fonts/true-crimes-webfont.ttf') format('truetype'),
+         url('fonts/true-crimes-webfont.svg#true_crimesregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+header,aside a,h1{font-family:truecrimes}
+header{
+	font-size:5em;
+	text-shadow:4px 4px 0 #b32f24,8px 8px 5px #000;
+}
+aside a{border:solid 2px #fff}
+h1{text-shadow:-2px -2px 0 #b7b7b7}
