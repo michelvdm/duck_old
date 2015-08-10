@@ -105,6 +105,7 @@ J.fn=O.prototype={
 extend(J,{
 	ieVer:function(){
 		var o=navigator.userAgent,rv;
+		if(/Edge\//.test(o))return 12;
 		if(!/Trident\/[567]\b/.test(o))return -1;
 		var re=new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
     	return(!!re.exec(o))?parseFloat(RegExp.$1):11;
