@@ -42,7 +42,10 @@ $(function(){
 		$img.hide();
 		$txt.html('');
 		$box.fadeIn(s);
-		setTimeout(function(){setImg(p)},s);
+		setTimeout(function(){
+			setImg(p);
+			$box.css({display:'flex'});
+		},s);
 		return false;
 	}
 	function doAction(){

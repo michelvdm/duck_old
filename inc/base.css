@@ -159,6 +159,7 @@ aside ul a{display:block;padding:16px;border-bottom:solid 1px #ccc;text-decorati
 .gallery .wp-caption-dd,.gallery figcaption{display:none}
 
 /* litebox */
+/*
 .mv-litebox{
 	position:fixed;
 	top:0;
@@ -169,7 +170,6 @@ aside ul a{display:block;padding:16px;border-bottom:solid 1px #ccc;text-decorati
 	z-index:999;
 	display:none;
 }
-
 .mv-litebox img{
 	max-width:100%;
 	max-height:100%;
@@ -178,6 +178,26 @@ aside ul a{display:block;padding:16px;border-bottom:solid 1px #ccc;text-decorati
   	left:50%;
   	transform:translate(-50%,-50%);
 }
+*/
+
+.mv-litebox{
+	position:fixed;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	background:rgba(0,0,0,.8);
+	z-index:999;
+	display:none;
+	/* flex */
+	/*display:flex;*/
+	flex-flow:column nowrap;
+	justify-content:center;
+	align-items:center;
+}
+
+.mv-litebox img{max-width:100%;max-height:100%}
+
 .mv-litebox div{
 	position:absolute;
 	left:0;
